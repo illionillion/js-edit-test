@@ -5,11 +5,12 @@ window.addEventListener("load",function(){
     document.querySelector("#runbtn").addEventListener("click",function(){
         PG_Run();
     })
+    
+    function PG_Run() {
+        // console.log(document.querySelector("#js_edit").value);
+        // let script_ele=document.createElement("script");
+        // script_ele.innerHTML=document.querySelector("#js_edit").value;
+        // document.body.appendChild(script_ele);
+        eval(document.querySelector("#js_edit").value);//evalで文字列をプログラムとして実行できる
+    }
 })
-
-function PG_Run() {
-    // console.log(document.querySelector("#js_edit").value);
-    let script_ele=document.createElement("script");
-    script_ele.innerHTML=document.querySelector("#js_edit").value;
-    document.body.appendChild(script_ele);
-}
